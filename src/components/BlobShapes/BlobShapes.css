@@ -1,6 +1,13 @@
+/* https://9elements.github.io/fancy-border-radius/ */
 .blobby {
   width: 100px;
   height: 100px;
   background-color: green;
-  border-radius: 1rem;
+  border-radius: 92% 8% 89% 11% / 100% 4% 96% 0%;
+  transition: border-radius 500ms ease-in-out;
+}
+
+
+.blobby:hover {
+  border-radius: 9% 91% 7% 93% / 96% 2% 98% 4% ;
 }
