@@ -3,6 +3,7 @@ import { Link, Route, Routes } from 'react-router-dom'
 import './App.css'
 import { BlobShapes } from './components/BlobShapes/BlobShapes'
 import { Playground } from './components/Playground'
+import { ResponsiveCardHover } from './components/ResponsiveCardHover/ResponsiveCardHover'
 
 const App: FC = () => (
 	<div className='App'>
@@ -10,6 +11,7 @@ const App: FC = () => (
 			<Route path='/' element={<Home />} />
 			<Route path='playground' element={<Playground />} />
 			<Route path='blobshapes' element={<BlobShapes />} />
+			<Route path='responsive-card-hover' element={<ResponsiveCardHover />} />
 		</Routes>
 	</div>
 )
@@ -17,18 +19,23 @@ const App: FC = () => (
 function Home() {
 	return (
 		<>
-			<div className='container'>
+			<div className='main-menu-container'>
 				<h1>Every Day</h1>
 			</div>
-			<div className='menu-grid'>
-				<div className='card'>
+			<div className='main-menu-grid'>
+				<div className='main-menu-card'>
 					<Link className='nav-link' to='/playground'>
 						Playground
 					</Link>
 				</div>
-				<div className='card'>
+				<div className='main-menu-card'>
 					<Link className='nav-link' to='/blobshapes'>
 						Blobshapes
+					</Link>
+				</div>
+				<div className='main-menu-card'>
+					<Link className='nav-link' to='/responsive-card-hover'>
+						Responsive Card Hover
 					</Link>
 				</div>
 			</div>
