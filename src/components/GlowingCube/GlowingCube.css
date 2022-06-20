@@ -4,46 +4,6 @@
     width: 100%;
 }
 
-.squirrel {
-	width: 100px;
-	height: 100px;
-	background-color: red;
-	animation: example;
-	animation-duration: 4s;
-    animation-iteration-count: 2;
-}
-
-@keyframes example {
-	0% {
-		background-color: red;
-	}
-	25% {
-		background-color: yellow;
-	}
-	50% {
-		background-color: green;
-	}
-	100% {
-		background-color: blue;
-	}
-}
-
-/* .style0 {
-    --i:0
-}
-
-.style1 {
-    --i:1
-}
-
-.style2 {
-    --i:2
-}
-
-.style3 {
-    --i:3
-}
-
 .glow-box-container {
     display: flex;
     justify-content: center;
@@ -57,16 +17,26 @@
     width: 300px;
     height: 300px;
     transform-style: preserve-3d;
-    animation: animate 4s linear infinate;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: animate;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
 }
 
 @keyframes animate {
     0% {
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+    /* 0% {
         transform: rotateX(30deg) rotateY(0deg);
     }
     10% {
         transform: rotateX(-30deg) rotatey(0deg);
-    }
+    } */
 }
 
 .cube div {
@@ -86,4 +56,32 @@
     height: 100%;
     background: linear-gradient(#151515, #00ec00);
     transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
-} */
+}
+
+.top {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background-color: #222;
+    transform: rotateX(90deg) translateZ(150px);
+}
+
+.top::before {
+    content:'';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 300px; 
+    height: 300px;
+    background: #0f0;
+    transform: translateZ(-380px);
+    filter: blur(20px);
+    box-shadow: 0 0 120px rgba(0, 255, 0, 0.2),
+    0 0 200px rgba(0, 255, 0, 0.4),
+    0 0 300px rgba(0, 255, 0, 0.6),
+    0 0 400px rgba(0, 255, 0, 0.8),
+    0 0 500px rgba(0, 255, 0, 1);
+
+}
