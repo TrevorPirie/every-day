@@ -4,9 +4,9 @@ import './MoveAround.css';
 const MoveAround: FC = () => {
   return (
     <div className='move-container'>
-      <h1>Fluffy duck</h1>
+      <h1>The cube</h1>
       <div className='move-cube'></div>
-      <h1>No longer a Fluffy duck</h1>
+      <h1>is restless...</h1>
     </div>
   );
 };
