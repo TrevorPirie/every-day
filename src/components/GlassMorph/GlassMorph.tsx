@@ -53,7 +53,7 @@ const GlassMorph: FC = (props: any) => {
             }}
             className='card'
           >
-            <h2>{index <= 8 ? `0${index + 1}` : index}</h2>
+            <h2 className='glass-h2'>{index <= 8 ? `0${index + 1}` : index}</h2>
             <h3>{element.name}</h3>
             <p>Role: {element.role}</p>
           </div>

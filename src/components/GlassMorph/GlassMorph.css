@@ -68,7 +68,7 @@
   opacity: 1;
 }
 
-.glass-morph-container .card .content h2 {
+.glass-morph-container .card .content .glass-h2 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   position: absolute;
   top: -220px;
