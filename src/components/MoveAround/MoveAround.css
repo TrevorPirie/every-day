@@ -5,6 +5,7 @@
   width: 100%;
   margin: 0;
   background-color: black;
+  perspective: 600px;
 }
 h1 {
   color: white;
@@ -30,20 +31,26 @@ h1 {
     left: 0px;
     top: 300px;
     background-color: blue;
+    perspective: 300px;
+    transform: rotate(90deg);
   }
+
   50% {
     left: 300px;
     top: 300px;
     background-color: greenyellow;
+    transform: rotate(370deg);
   }
   75% {
     left: 0px;
     top: 300px;
     background-color: blue;
+    transform: rotate(90deg);
   }
   100% {
     left: 0px;
     top: 0px;
     background-color: crimson;
+    transform: rotate(0deg);
   }
 }
